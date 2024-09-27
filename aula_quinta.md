@@ -97,6 +97,16 @@ __Enter para finalizar enter__
 
 _LAN configurada._
 
+- Teste ping do Windows Server para o pfSense
+
+![ping win server pfsense](./assets/images/pfsense_15.png)
+
+> Observação: Ambos devem estar na mesma rede, nesse cenário temos o pfsense com 2 placas de rede (1 NAT e 1 LAN Segment), e o Windows Server temos 1 placa de rede (1 LAN Segment) na mesma rede do pfsense.
+
+- Página web do pfSense
+
+![pfsense web page](./assets/images/pfsense_16.png)
+
 
 ### DHCP
 
