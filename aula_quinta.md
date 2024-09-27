@@ -60,13 +60,17 @@
 > __LAN__: LAN (Local Area Network) é uma rede de comunicação que conecta dispositivos, como computadores e impressoras, em uma área geográfica limitada, como uma casa, escritório ou escola. Ela permite o compartilhamento de recursos e a comunicação rápida entre os dispositivos conectados.
 
 - Interface Configuration
+
 __option 2__
 
 ![pfSense interface configuration](./assets/images/pfsense_10.png)
 
 - LAN Configuration
+
 __option 2__
+
 __DHCP no__
+
 __ip: 172.20.27.254/24__
 
 > Observação: É necessário colocar a máscara subnet (como /24) junto ao ip, pois se faltar o pfsense irá perguntar qual é o subnet mask.
@@ -74,9 +78,13 @@ __ip: 172.20.27.254/24__
 ![pfSense lan configuration 00](./assets/images/pfsense_11.png)
 
 __For a lan ENTER for none enter__
+
 __Configuration IPv6/DHCP6 no__
+
 __LAN IPv6 ENTER for none enter__
+
 __Enable DHCP for LAN no__
+
 __Revert to HTTP yes__
 
 ![pfSense lan configuration 01](./assets/images/pfsense_12.png)
@@ -88,46 +96,6 @@ __Enter para finalizar enter__
 ![pfSense lan configuration 03](./assets/images/pfsense_14.png)
 
 _LAN configurada._
-
-
-
-
-
-
-- Entire Disk
-
-![pfSense entire disk](./assets/images/pfsense_03.png)
-
-- Entire Disk
-
-![pfSense entire disk](./assets/images/pfsense_03.png)
-
-- Entire Disk
-
-![pfSense entire disk](./assets/images/pfsense_03.png)
-
-- Entire Disk
-
-![pfSense entire disk](./assets/images/pfsense_03.png)
-
-- Entire Disk
-
-![pfSense entire disk](./assets/images/pfsense_03.png)
-
-- Entire Disk
-
-![pfSense entire disk](./assets/images/pfsense_03.png)
-
-- Entire Disk
-
-![pfSense entire disk](./assets/images/pfsense_03.png)
-
-- Entire Disk
-
-![pfSense entire disk](./assets/images/pfsense_03.png)
-
-
-
 
 
 ### DHCP
