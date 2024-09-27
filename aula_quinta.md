@@ -136,9 +136,10 @@ _Configure WAN Interface_
 ![pfsense wan interface](./assets/images/pfsense_images/pfsense_22.png)
 
 > Observação: Nessa página nada foi feito, nada configurado/alterado. Scroll para baixo e clicar no botão `Next`.
+
 > Pois essa página é de rede pública, ISP é responsável.
 
->__ISP__: Internet Service Provider é a empresa que fornece acesso à internet para indivíduos e organizações, fornecem a conexão à internet por meio de diferentes tecnologias.
+> __ISP__: Internet Service Provider é a empresa que fornece acesso à internet para indivíduos e organizações, fornecem a conexão à internet por meio de diferentes tecnologias.
 
 _Configure LAN Interface_
 
@@ -175,6 +176,7 @@ _Copyright_
 ![pfsense dashboard](./assets/images/pfsense_images/pfsense_30.png)
 
 > __FQDN__: Fully Qualified Domain Name é o nome de domínio completo, que inclui o nome do host e o nome de domínio.
+
 > __TLD__: Top-Level Domain é a parte final de um nome de domínio na internet.
 
 _Exemplo_:
@@ -193,14 +195,63 @@ _Exemplo_:
 
 > __IP Loopback 127.0.0.1__: é um endereço IP especial que aponta para o próprio dispositivo em que ele é usado, chamado de "localhost", ele é utilizado para testar e diagnosticar a conectividade de rede local, sem precisar de uma rede externa.
 
-<!-- - Windows Server 2022 Configurando __DHCP__
+- Windows Server 2022 Configurando __DHCP__
 
-> __DHCP__: Dynamic Host Configuration Protocol é um protocolo que automaticamente atribui endereços IP e outras configurações de rede a dispositivos em uma rede. -->
+> __DHCP__: Dynamic Host Configuration Protocol é um protocolo que automaticamente atribui endereços IP e outras configurações de rede a dispositivos em uma rede.
 
+> Em `__Tools__ > __DHCP__`, em `__IPv4__ > __New Scope...__`
 
+![windows server configurando dhcp 00](./assets/images/windows_server_2022_images/windows_server_2022_01.png)
 
+![windows server configurando dhcp 01](./assets/images/windows_server_2022_images/windows_server_2022_02.png)
 
+> Aqui estamos no Wizard para definir o scope. Clica em `Next`.
 
+![windows server configurando dhcp 02](./assets/images/windows_server_2022_images/windows_server_2022_03.png)
+
+> Configure o __Name__ e o __Description__ de acordo com a __sua__ rede. E clica em `Next`.
+
+![windows server configurando dhcp 03](./assets/images/windows_server_2022_images/windows_server_2022_04.png)
+
+> Configure o __range__ entre os IPs (Start/End IP address). Configure a máscara __subnet mask__. De acordo com a __sua__ rede. E clica em `Next`.
+
+![windows server configurando dhcp 04](./assets/images/windows_server_2022_images/windows_server_2022_05.png)
+
+> Aqui consegue-se configurar o __exclusão__ entre os IPs. Isso significa que o DHCP não vai utilizá-los e tens os IPs para configuração estática para outros dispositivos, como impressoras.
+
+![windows server configurando dhcp 05](./assets/images/windows_server_2022_images/windows_server_2022_06.png)
+
+> No __Lease Duration__ refere-se ao período de tempo que um endereço IP é atribuído a um dispositivo em uma rede. Quando um dispositivo recebe um IP do servidor DHCP, ele "aluga" o endereço IP por um tempo definido, chamado de "lease duration". Quando o lease está perto de expirar, o dispositivo tenta renovar o IP com o servidor DHCP.
+
+> Se a lease duration expirar sem ser renovada, o endereço IP volta a ficar disponível para ser atribuído a outro dispositivo na rede.
+
+> Clica em `Next` após definir o seu Lease Duration.
+
+![windows server configurando dhcp 06](./assets/images/windows_server_2022_images/windows_server_2022_07.png)
+
+> O __Configure DHCP Options__ refere-se à configuração de opções adicionais para os dispositivos que recebem endereços IP de um servidor DHCP. Fornecem informações adicionais; __Gateway__, __Domain Name__, __DNS Servers__ e __WINS Servers__.
+
+> Aqui já irá configurar essas opções, pois estar sendo selecionado que sim e clicando em `Next`. Configure de acordo com a __sua__ rede.
+
+![windows server configurando dhcp 07](./assets/images/windows_server_2022_images/windows_server_2022_08.png)
+
+![windows server configurando dhcp 08](./assets/images/windows_server_2022_images/windows_server_2022_09.png)
+
+![windows server configurando dhcp 09](./assets/images/windows_server_2022_images/windows_server_2022_10.png)
+
+![windows server configurando dhcp 10](./assets/images/windows_server_2022_images/windows_server_2022_11.png)
+
+_Ativando o Scope e Finalizando o New Scope Wizard_
+
+![windows server configurando dhcp 11](./assets/images/windows_server_2022_images/windows_server_2022_12.png)
+
+![windows server configurando dhcp 12](./assets/images/windows_server_2022_images/windows_server_2022_13.png)
+
+_Autorizando e Atualizando o New Scope Criado_
+
+![windows server configurando dhcp 13](./assets/images/windows_server_2022_images/windows_server_2022_14.png)
+
+![windows server configurando dhcp 14](./assets/images/windows_server_2022_images/windows_server_2022_15.png)
 
 
 
