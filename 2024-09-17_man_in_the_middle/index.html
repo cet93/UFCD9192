@@ -22,5 +22,110 @@
       </div>
     </div>
 
+    <div>
+      <h2>Kali - Ettercap</h2>
+      <p>
+        Como root, executar o camando "ettercap -G", para abrir a aplicação em modo gráfico.
+        Com o rato clicar no visto, para selecionar a interface de rede.
+      </p>
+      <div style="text-align: center">
+        <img
+          src="./image/kali_ettercap.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+
+      <p>
+        No menu selecionar "ARP poisoning".
+      </p>
+      <div style="text-align: center">
+        <img
+          src="./image/kali_ettercap_arp_poisoning.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+
+      <p>
+        E clicamos em OK.
+      </p>
+      <div style="text-align: center">
+        <img
+          src="./image/kali_ettercap_arp_poisoning_ok.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+
+      <p>
+        No menu dos 3 pontos, selecionamos "Hosts\Scan For Hosts".
+      </p>
+      <div style="text-align: center">
+        <img
+          src="./image/kali_ettercap_scan_for_hosts.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+
+      <p>
+        Voltamos ao menu dos 3 pontos, selecionamos "Hosts\Hosts List".
+      </p>
+      <div style="text-align: center">
+        <img
+          src="./image/kali_ettercap_hosts_list.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>    
+      
+      <p>
+        Selecionamos o IP (192.168.59.254) do PFSENSE e clicamos em Targe1, 
+        de seguida selecionamos o IP (192.168.59.1) do Windows Server e clicamos em Target2.
+      </p>
+      <div style="text-align: center">
+        <img
+          src="./image/kali_ettercap_target.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>    
+      
+      <p>
+        No Windows Server, fazemos login com o utilizador "admin".
+      </p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_pfsense_login.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+
+      <p>
+        No Ettercap, podemos ver as conexões, se formos ao menu dos 3 pontos, selecionarmos View\Connections.
+      </p>
+      <div style="text-align: center">
+        <img
+          src="./image/kali_ettercap_connections.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>              
+
+      <p>
+        Se fizermos duplo clique sobre a conexão entre o Windows Server e o PFSENSE, na porta HTTPS (22000),
+        confirmamos que a ligação se encontra encriptada.
+      </p>
+      <div style="text-align: center">
+        <img
+          src="./image/kali_ettercap_encripted.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>     
+    </div>
+
   </body>
 </html>
