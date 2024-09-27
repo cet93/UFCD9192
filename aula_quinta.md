@@ -140,7 +140,7 @@ _Configure WAN Interface_
 
 >__ISP__: Internet Service Provider é a empresa que fornece acesso à internet para indivíduos e organizações, fornecem a conexão à internet por meio de diferentes tecnologias.
 
-<!-- _Configure LAN Interface_
+_Configure LAN Interface_
 
 ![pfsense lan interface](./assets/images/pfsense_images/pfsense_23.png)
 
@@ -170,7 +170,7 @@ _Copyright_
 
 ![pfsense copyright](./assets/images/pfsense_images/pfsense_28.png)
 
-- Dashboard pfSense
+<!-- - Dashboard pfSense
 
 ![pfsense dashboard](./assets/images/pfsense_images/pfsense_30.png)
 
