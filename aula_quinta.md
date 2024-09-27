@@ -170,7 +170,7 @@ _Copyright_
 
 ![pfsense copyright](./assets/images/pfsense_images/pfsense_28.png)
 
-<!-- - Dashboard pfSense
+- Dashboard pfSense
 
 ![pfsense dashboard](./assets/images/pfsense_images/pfsense_30.png)
 
@@ -185,7 +185,7 @@ _Exemplo_:
 ---
 ---
 
-- Windows Server 2022 Preferred/Alternade DNS
+<!-- - Windows Server 2022 Preferred/Alternade DNS
 
 > Verifique na placa de rede do Windows Server se a configuração do __Preferred DNS Server__ e __Alternate DNS Server__ ou mantiveram as configurações feitas para os DNS ou foi feito o override automaticamente voltando para o __IP Loopback__ `127.0.0.1`. Se tiver feito o override, reconfigure os DNS (novamente) de acordo com a __sua__ rede, em `Internet Protocol Version 4 (TCP/IPv4)` acessando suas propriedades.
 
