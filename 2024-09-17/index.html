@@ -1,33 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <div style="text-align: center;">
-    <img src="image/pfsense02.png" alt="1" style="width: 50%;">
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>2024-09-17 Certificados HTTPS</h1>
 
-  <div >
-    <ul>
+    <nav>
+      <ul>
       <li>
-        Descriptive name: Certificado para a empresa hacking.com
+        <a href="#salvaguardar-configuracoes">Salvaguardar configurações</a>
       </li>
+      <li><a href="#adicionar-autoridade">Adicionar Autoridade</a></li>
+      <li><a href="#editar-a-autoridade">Editar a Autoridade</a></li>
       <li>
-        Method: Import an existing Certificate Authority
+        <a href="#resultado-da-criacao-da-autoridade"
+        >Resultado da criação da Autoridade</a
+        >
       </li>
-      <li>
-        Certificate data: (Copiar e colar certificado gerado)
-      </li>
-    </ul>
-  </div>
+      <li><a href="#criar-certificado">Criar Certificado</a></li>
+      <li><a href="#editar-a-certificado">Editar a Certificado</a></li>
+      </ul>
+    </nav>
 
-  <div style="text-align: center;">
-    <img src="image/pfsense03.png" alt="1" style="width: 50%;">
-  </div>
+    <div>
+      <h2>Salvaguardar configurações</h2>
+      <p>
+        Antes de proceder à criação dos certificados deve-se salvaguardar a
+        configuração da máquina, através de "Clone" ou "Snapshot" (se for uma
+        VM) ou salvaguardando as configurações da máquina.
+      </p>
+      <div style="text-align: center">
+        <img
+          src="./image/pfsense_save_configuration.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+    </div>
 
+    <div>
+      <h2>Adicionar Autoridade</h2>
+      <p>Ir até System\Certificate\Authorities e selecionar ADD.</p>
+      <div style="text-align: center">
+        <img
+          src="./image/pfsense_add_authority.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+    </div>
 
-</body>
+    <div>
+      <h2>Editar a Autoridade</h2>
+      <p>Preencher os seguintes campos:</p>
+      <ul>
+        <li>Descriptive name: Certificado para a empresa hacking.com</li>
+        <li>Method: Create an internal Certificate Authority</li>
+        <li>Digest Algorithm: sha256</li>
+        <li>Lifetime (days): 3560</li>
+        <li>Common Name: Certificado para a empresa hacking.com</li>
+        <li>Country Code: PT</li>
+        <li>State or Province: Lisboa</li>
+        <li>City: Lisboa</li>
+        <li>Organization: hacking.com</li>
+      </ul>
+      <div style="text-align: center">
+        <img
+          src="./image/pfsense_authority_edit.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+    </div>
+
+    <div>
+      <h2>Resultado da criação da Autoridade</h2>
+      <p>Preencher os seguintes campos:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/pfsense_authority_result.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+    </div>
+
+    <div>
+      <h2>Criar Certificado</h2>
+      <p>Selecionar Add/Sign:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/pfsense_certificate_create.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+    </div>
+
+    <div>
+      <h2>Editar a Certificado</h2>
+      <p>Preencher os seguintes campos:</p>
+      <ul>
+        <li>Descriptive name: Certificado https pfsense</li>
+        <li>Common Name: Certificado https pfsense</li>
+        <li>Certificate Type: Server Certificate</li>
+        <li>Alternative Names: FQDN or Hostname - pfsense.hacking.com</li>
+        <li>Alternative Names: IP Address - 172.20.27.254</li>
+      </ul>
+      <div style="text-align: center">
+        <img
+          src="./image/pfsense_certificate_edit.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+    </div>
+
+    <div>
+      <h2>Exportar Certificados</h2>
+      <p>Autoridade Certificadora:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/pfsense_autority_export.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+      <p>Certificado:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/pfsense_certificate_export.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+    </div>
+
+    <div>
+      <h2>Instalar Autoridade de Certificadora no Windows</h2>
+      <p>Abrir Certificado da Empresa:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_authority_install.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+      <p>Instalar em Local Machine:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_authority_install_01.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+      <p>Selecionar "Trusted Root Certification Authorities":</p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_authority_install_02.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>  
+      <p>Depois de terminada a instalação recebemos uma mensagem de que o processo terminou com sucesso:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_authority_install_03.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+    </div>
+
+    <div>
+      <h2>Instalar o Certificado no Windows</h2>
+      <p>Para instalar o certificado, repetimos o processo realizado para a Empresa Certificadora. </p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_authority_install.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+      <p>Instalar em Local Machine:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_authority_install_01.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+      <p>Selecionar "Trusted Root Certification Authorities":</p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_authority_install_02.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>  
+      <p>Depois de terminada a instalação recebemos uma mensagem de que o processo terminou com sucesso:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_authority_install_03.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+    </div>
+
+  </body>
 </html>
