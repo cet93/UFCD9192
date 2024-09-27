@@ -7,12 +7,78 @@
 
 > Red Hat é uma empresa de tecnologia que desenvolve soluções de software de código aberto, conhecida principalmente por seu sistema operacional Red Hat Enterprise Linux (RHEL). A empresa oferece produtos e serviços voltados para infraestrutura de TI, nuvem, virtualização e containers, com um forte foco em soluções baseadas em Linux.
 
+# PFSENSE
+
+> O pfSense é um firewall de código aberto e uma distribuição de roteamento baseada no sistema operacional FreeBSD. Ele oferece uma solução completa para gerenciamento de rede.
+
+[__Documentação pfSense__](https://docs.netgate.com/pfsense/en/latest)
+
+## Instalação
+
+- Init
+
+![pfSense init](./assets/images/pfsense_00.png)
+
+- Install
+
+![pfSense install](./assets/images/pfsense_01.png)
+
+- Auto UFS
+
+![pfSense auto ufs](./assets/images/pfsense_02.png)
+
+- Entire Disk
+
+![pfSense entire disk](./assets/images/pfsense_03.png)
+
+- MBR DOS Partition
+
+![pfSense mbr dos partition](./assets/images/pfsense_04.png)
+
+- Finish
+
+![pfSense finish](./assets/images/pfsense_05.png)
+
+- Commit
+
+![pfSense commit](./assets/images/pfsense_06.png)
+
+- Installer Progress
+
+![pfSense installer progress](./assets/images/pfsense_07.png)
+
+- Installation Complete Reboot
+
+![pfSense installation complete reboot](./assets/images/pfsense_08.png)
+
+- Screen Init
+
+![pfSense screen init](./assets/images/pfsense_09.png)
+
+__WAN__:
+
+__LAN__:
+
+- Interface Configuration
+__option 2__
+
+![pfSense interface configuration](./assets/images/pfsense_10.png)
 
 
 
-# PF SENSE
 
-> pfSense é um firewall de código aberto e uma distribuição de roteamento baseada no sistema operacional FreeBSD. Ele oferece uma solução completa para gerenciamento de rede.
+
+
+
+- Entire Disk
+
+![pfSense entire disk](./assets/images/pfsense_03.png)
+
+- Entire Disk
+
+![pfSense entire disk](./assets/images/pfsense_03.png)
+
+
 
 
 
@@ -34,13 +100,12 @@
 
 > __Forest__ é o conjunto de um ou mais domains que compartilham uma mesma estrutura de diretório, mas podem ter políticas e regras diferentes. Um forest pode conter vários domains e serve como o nível mais alto de organização no AD.
 
+
 ### DOMAIN CONTROLLER OPTIONS
 
 ### FOREST FUNCTIONAL LEVEL
 
 ### DOMAIN FUNCTIONAL LEVEL
-
-
 
 ### FAILOVER
 
@@ -51,7 +116,3 @@
 ### IP LOOPBACK 127.0.0.1
 
 
-
-### LAN
-
-### WAN
