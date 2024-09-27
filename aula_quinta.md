@@ -185,7 +185,7 @@ _Exemplo_:
 ---
 ---
 
-<!-- - Windows Server 2022 Preferred/Alternade DNS
+- Windows Server 2022 Preferred/Alternade DNS
 
 > Verifique na placa de rede do Windows Server se a configuração do __Preferred DNS Server__ e __Alternate DNS Server__ ou mantiveram as configurações feitas para os DNS ou foi feito o override automaticamente voltando para o __IP Loopback__ `127.0.0.1`. Se tiver feito o override, reconfigure os DNS (novamente) de acordo com a __sua__ rede, em `Internet Protocol Version 4 (TCP/IPv4)` acessando suas propriedades.
 
@@ -193,7 +193,7 @@ _Exemplo_:
 
 > __IP Loopback 127.0.0.1__: é um endereço IP especial que aponta para o próprio dispositivo em que ele é usado, chamado de "localhost", ele é utilizado para testar e diagnosticar a conectividade de rede local, sem precisar de uma rede externa.
 
-- Windows Server 2022 Configurando __DHCP__
+<!-- - Windows Server 2022 Configurando __DHCP__
 
 > __DHCP__: Dynamic Host Configuration Protocol é um protocolo que automaticamente atribui endereços IP e outras configurações de rede a dispositivos em uma rede. -->
 
