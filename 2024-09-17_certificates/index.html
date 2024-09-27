@@ -211,5 +211,163 @@
       </div>
     </div>
 
+    <div>
+      <h2>Instalação de Certificados - Troubleshooting</h2>
+      <p>Para confirmarmos que a instalação foi bem sucedida, executamos o snap-in certlm.msc
+        onde coirmamos que os certificados estão bem instalados:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_certificate_mmc.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+    </div>
+
+    <div>
+      <h2>Ativação do HTTPS no PFSENSE</h2>
+      <p>Ir até System\Advanced\Admin Access e selecionar a opção HTTPS (SSL/TLS), 
+        inserir um TCP Port (22000), de seguida selecionar Save:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/pfsense_https.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+    </div>    
+    
+    <div>
+      <h2>Verificação do HTTPS</h2>
+      <p>No browser onde instalámos os certificados, abrimos uma página do browser,
+        com o ip do PFSENSE e o TCP port específicado no ponto anterior :</p>
+      <div style="text-align: center">
+        <img
+          src="./image/pfsense_certificate_validate.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+      <p>Conteúdo do certificado no browser:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/pfsense_browser_certificate.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>      
+    </div>    
+
+    <div>
+      <h2>Criação de OU</h2>
+      <p>Numa rede Windows, para replicarmos automaticamente os certificados,
+        criamos OUs (Unidades Organizacionais):</p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_new_ou.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+    </div>    
+
+    <div>
+      <h2>Criação de utilizador dentro da OU</h2>
+      <p>Adicionamos os utilizadores à OU:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_new_user.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+      <p>Definimos uma password, para a nova conta de utilizador:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_new_user_password.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>      
+    </div>
+
+    <div>
+      <h2>Criação da Group Policy</h2>
+      <p>Abrimos o snap-in Group Policy Management (gpmc.msc), na opção Default DOmain Policies,
+        selecionamos Edit:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_group_policy_management.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+
+      <p>Selecionamos Computer Configuration\Policies\Windows Settings\Security Settings\
+        Public Key Policies\Trusted Root Certification Authorities, e com o botão direito do rato selecionamos a opção Import...:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_gpo.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+
+      <p>Selecionamos Next na janela que aparece:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_certificate_import.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+
+      <p>Abrimos o ficheiro referente ao certificado para a empresa, depois é só fazer Next, Next e Finish:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_gpo_open_certificate.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+
+      <p>Abrimos o ficheiro referente ao certificado para a empresa, depois é só fazer Next, Next e Finish:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_gpo_open_certificate.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+
+      <p>Recebemos por fim uma mensagem a iindicar que o processo, foi executado com sucesso.
+        De seguida executamos o mesmo processo para o outro certificado:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_certificate_finish.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+
+      <p>Na linha de comandos do Windows Server, executamos o comando Gpupdate /force (executar este comando 3 vezes, porque estamos a executar o windows em VM. De seguida fazer um restar ao Windows 10):</p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_gpupdate.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+      
+      <p>Depois de reiniciar o Windows, se acedermos ao site do PFSENSE, pode verificar que o certificado foi instalado com sucesso:</p>
+      <div style="text-align: center">
+        <img
+          src="./image/windows_browser_certificate.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+    </div>
+
   </body>
 </html>
