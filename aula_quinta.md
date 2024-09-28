@@ -253,9 +253,12 @@ _Ativando o Scope e Finalizando o New Scope Wizard_
 
 ![windows server configurando dhcp 14](./assets/images/windows_server_2022_images/windows_server_2022_15.png)
 
+---
+---
+
 - __Verificando a distribuição de IP via DHCP do Windows Server no Client Kali Linux__
 
-> Observação: __Atualização do cenário__; todos devem estar na mesma rede, nesse cenário temos o pfsense com 2 placas de rede (1 NAT e 1 LAN Segment), o Windows Server com 1 placa de rede (1 LAN Segment), e agora o __clien t kali linux__ possui 1 placa de rede (1 LAN Segment), se o kali linux estiver em NAT __deve__ alterar para LAN Segment.
+> Observação: __Atualização do cenário__; todos devem estar na mesma rede, nesse cenário temos o pfsense com 2 placas de rede (1 NAT e 1 LAN Segment), o Windows Server com 1 placa de rede (1 LAN Segment), e agora o __client kali linux__ possui 1 placa de rede (1 LAN Segment), se o kali linux estiver em NAT __deve__ alterar para LAN Segment.
 
 > Kali Linux deve estar no LAN Segment em vez de NAT está relacionada à necessidade de todos os dispositivos estarem na mesma rede e se comunicarem diretamente entre si.
 
@@ -271,9 +274,23 @@ _Kali na rede NAT_
 
 _Kali na rede LAN Segment_
 
-![kali linux client 01](./assets/images/kali_linux_client_images/kali_linux_client_00.png)
+![kali linux client 01](./assets/images/kali_linux_client_images/kali_linux_client_01.png)
 
 > O comando __ip address__ ou __ip a__ é usado em sistemas Linux para apenas exibir os endereços IP das interfaces de rede.
+
+__Kali Linux ETTERCAP__
+
+> Observação: __troubleshooting__; Caso tenha o seguinte output ao rodar o comando `GTK3 failed to initialize. Is X running?`: 
+
+![kali linux client 02](./assets/images/kali_linux_client_images/kali_linux_client_02.png)
+
+> Ou rodar o comando: `startx`, ou sair do modo root e executar o comando como usuário utilizando sudo: `sudo ettercap -G`.
+
+![kali linux client 03](./assets/images/kali_linux_client_images/kali_linux_client_03.png)
+
+_Se utilizar o startx, é provável ter que sempre utilizá-lo após reiniciar o Kali Linux._
+
+
 
 
 
