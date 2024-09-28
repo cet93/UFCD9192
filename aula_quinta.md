@@ -330,6 +330,40 @@ _Em `Accept` > `MITM Menu` > `ARP Poisoning` > `OK` > `Ettercap Menu` > `Hosts` 
 
 > DNS (Domain Name System) é o sistema que traduz nomes de domínio legíveis (como www.exemplo.com) em endereços IP numéricos (como 192.168.1.1) que os computadores usam para se comunicar entre si, funciona como uma "agenda telefônica" da internet.
 
+*__DNS Fowarders__: São servidores DNS configurados para encaminhar consultas DNS que não podem ser resolvidas localmente para outros servidores DNS externos.*
+
+__Configurar DNS Fowarders__
+
+_Tools_ > _DNS_ >_Forward_ > _Properties_
+
+![windows server configurando dhcp 15](./assets/images/windows_server_2022_images/windows_server_2022_16.png)
+
+![windows server configurando dhcp 16](./assets/images/windows_server_2022_images/windows_server_2022_17.png)
+
+_Edit_ > _Adiciona IPs de DNS relevantes para __sua__ rede_ > _Clica `OK`_ > _`Apply` e `OK`_
+
+![windows server configurando dhcp 17](./assets/images/windows_server_2022_images/windows_server_2022_18.png)
+
+![windows server configurando dhcp 18](./assets/images/windows_server_2022_images/windows_server_2022_19.png)
+
+![windows server configurando dhcp 19](./assets/images/windows_server_2022_images/windows_server_2022_20.png)
+
+![windows server configurando dhcp 20](./assets/images/windows_server_2022_images/windows_server_2022_21.png)
+
+> __DNS Forward Zone__ é uma configuração no servidor DNS que define como as consultas para domínios específicos serão encaminhadas para outro servidor DNS, chamado de forwarder. Em uma Forward Zone, o servidor DNS não tenta resolver as consultas por conta própria; em vez disso, ele encaminha todas as solicitações de resolução de nome para um servidor DNS externo.
+
+_Traduz nomes para IPs_
+
+> __DNS Reverse Zone__ é usada para realizar consultas DNS reversas, ou seja, traduzir endereços IP em nomes de domínio. Diferente da consulta DNS padrão, que resolve um nome de domínio em um endereço IP, a Reverse Zone mapeia um endereço IP para o nome de host correspondente.
+
+_Traduz IPs para nomes_
+
+__Configurando Reverse Lookup Zone__
+
+
+
+
+
 ### ACTIVE DIRECTORY AD
 
 > Active Directory (AD) é um serviço da Microsoft que gerencia e organiza redes de computadores em ambientes corporativos. Ele permite que administradores controlem o acesso a recursos. O AD usa um banco de dados centralizado para armazenar informações sobre contas de usuário, computadores e outros objetos da rede, facilitando a gestão e segurança de grandes redes empresariais.
