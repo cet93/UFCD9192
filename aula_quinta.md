@@ -280,6 +280,8 @@ _Kali na rede LAN Segment_
 
 __Kali Linux ETTERCAP__
 
+> __Ettercap__ é uma ferramenta de segurança de rede usada para realizar ataques de _man-in-the-middle (__MITM__)_, monitorar e modificar tráfego em tempo real (injeção de tráfego), e realizar sniffing de dados (captura o tráfego de rede em tempo real). É amplamente utilizada em testes de penetração para identificar vulnerabilidades em redes.
+
 > Observação: __troubleshooting__; Caso tenha o seguinte output ao rodar o comando `GTK3 failed to initialize. Is X running?`: 
 
 ![kali linux client 02](./assets/images/kali_linux_client_images/kali_linux_client_02.png)
@@ -288,11 +290,41 @@ __Kali Linux ETTERCAP__
 
 ![kali linux client 03](./assets/images/kali_linux_client_images/kali_linux_client_03.png)
 
-_Se utilizar o startx, é provável ter que sempre utilizá-lo após reiniciar o Kali Linux._
+![kali linux client 04](./assets/images/kali_linux_client_images/kali_linux_client_04.png)
 
+![kali linux client 05](./assets/images/kali_linux_client_images/kali_linux_client_05.png)
 
+> _Se utilizar o startx, é provável sempre ter que utilizá-lo após reiniciar o Kali Linux._
 
+_A opção `-G` no __Ettercap__ inicia a interface gráfica (GUI) da ferramenta._
 
+_Mascarar o Kali com MAC Address do router (pfsense)_
+
+_Em `Accept` > `MITM Menu` > `ARP Poisoning` > `OK` > `Ettercap Menu` > `Hosts` > `Scan for Hosts` > _foi encontrado hosts (2)_
+
+![kali linux client 06](./assets/images/kali_linux_client_images/kali_linux_client_06.png)
+
+![kali linux client 07](./assets/images/kali_linux_client_images/kali_linux_client_07.png)
+
+![kali linux client 08](./assets/images/kali_linux_client_images/kali_linux_client_08.png)
+
+![kali linux client 09](./assets/images/kali_linux_client_images/kali_linux_client_09.png)
+
+![kali linux client 10](./assets/images/kali_linux_client_images/kali_linux_client_10.png)
+
+![kali linux client 11](./assets/images/kali_linux_client_images/kali_linux_client_11.png)
+
+`Ettercap Menu` > `Hosts` > `Hosts List` > _ficar no meio da conexão entre o router (pfsense) e o server (windows server), selecione o pfsense para Target 1 e o windows server para Target 2_ > _faça login do web page do pfsense no windows server_ > _no kali no ettercap veja o conteúdo transmitido entre o router e o server_
+
+![kali linux client 12](./assets/images/kali_linux_client_images/kali_linux_client_12.png)
+
+![kali linux client 13](./assets/images/kali_linux_client_images/kali_linux_client_13.png)
+
+![kali linux client 14](./assets/images/kali_linux_client_images/kali_linux_client_14.png)
+
+![kali linux client 15](./assets/images/kali_linux_client_images/kali_linux_client_15.png)
+
+![kali linux client 16](./assets/images/kali_linux_client_images/kali_linux_client_16.png)
 
 ### DNS
 
