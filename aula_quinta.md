@@ -405,7 +405,13 @@ _Acesse o web page do pfsense através do nome configurado na zona_
 
 ![windows server configurando dns 32](./assets/images/windows_server_2022_images/windows_server_2022_33.png)
 
+_Verifica se o DNS configurado das zonas estão a funcionar de acordo_
 
+![windows server configurando dns 33](./assets/images/windows_server_2022_images/windows_server_2022_34.png)
+
+> `nslookup` é uma ferramenta de linha de comando usada para consultar servidores DNS e obter informações sobre o mapeamento entre nomes de domínio e endereços IP. Ele permite verificar se um domínio está corretamente resolvendo para um endereço IP, identificar o servidor DNS responsável por uma zona, e fazer consultas de registros DNS.
+
+_Como saber se o dns está bem configurado através da url somente?_
 
 
 
