@@ -336,19 +336,19 @@ __Configurar DNS Fowarders__
 
 _Tools_ > _DNS_ >_Forward_ > _Properties_
 
-![windows server configurando dhcp 15](./assets/images/windows_server_2022_images/windows_server_2022_16.png)
+![windows server configurando dns 15](./assets/images/windows_server_2022_images/windows_server_2022_16.png)
 
-![windows server configurando dhcp 16](./assets/images/windows_server_2022_images/windows_server_2022_17.png)
+![windows server configurando dns 16](./assets/images/windows_server_2022_images/windows_server_2022_17.png)
 
 _Edit_ > _Adiciona IPs de DNS relevantes para __sua__ rede_ > _Clica `OK`_ > _`Apply` e `OK`_
 
-![windows server configurando dhcp 17](./assets/images/windows_server_2022_images/windows_server_2022_18.png)
+![windows server configurando dns 17](./assets/images/windows_server_2022_images/windows_server_2022_18.png)
 
-![windows server configurando dhcp 18](./assets/images/windows_server_2022_images/windows_server_2022_19.png)
+![windows server configurando dns 18](./assets/images/windows_server_2022_images/windows_server_2022_19.png)
 
-![windows server configurando dhcp 19](./assets/images/windows_server_2022_images/windows_server_2022_20.png)
+![windows server configurando dns 19](./assets/images/windows_server_2022_images/windows_server_2022_20.png)
 
-![windows server configurando dhcp 20](./assets/images/windows_server_2022_images/windows_server_2022_21.png)
+![windows server configurando dns 20](./assets/images/windows_server_2022_images/windows_server_2022_21.png)
 
 > __DNS Forward Zone__ é uma configuração no servidor DNS que define como as consultas para domínios específicos serão encaminhadas para outro servidor DNS, chamado de forwarder. Em uma Forward Zone, o servidor DNS não tenta resolver as consultas por conta própria; em vez disso, ele encaminha todas as solicitações de resolução de nome para um servidor DNS externo.
 
@@ -359,6 +359,52 @@ _Traduz nomes para IPs_
 _Traduz IPs para nomes_
 
 __Configurando Reverse Lookup Zone__
+
+_Reverse Lookup Zones_ > _New Zone..._ > `Next` > _Primary Zone_ > _... domain controllers in this domain: ..._ e _`Next`_ > _IPv4 Reverse Lookup Zone_
+
+![windows server configurando dns 21](./assets/images/windows_server_2022_images/windows_server_2022_22.png)
+
+![windows server configurando dns 22](./assets/images/windows_server_2022_images/windows_server_2022_23.png)
+
+![windows server configurando dns 23](./assets/images/windows_server_2022_images/windows_server_2022_24.png)
+
+![windows server configurando dns 24](./assets/images/windows_server_2022_images/windows_server_2022_25.png)
+
+_Configure o __Reverse lookup zone name__ de acordo com __sua__ rede_ > _Allow only secure dynamic updates..._ > `Finish`
+
+![windows server configurando dns 25](./assets/images/windows_server_2022_images/windows_server_2022_26.png)
+
+![windows server configurando dns 26](./assets/images/windows_server_2022_images/windows_server_2022_27.png)
+
+![windows server configurando dns 27](./assets/images/windows_server_2022_images/windows_server_2022_28.png)
+
+*__SOA__ ou Start of Authority é um registro DNS que contém informações sobre a zona, incluindo o servidor DNS principal, o contato administrativo, e o número de série para controlar atualizações. Ele define como a zona é gerenciada e sincronizada entre servidores DNS primários e secundários.*
+
+> SOA: Define a autoridade da zona e as regras de sincronização.
+> NS ou Name Server: Indica quais servidores DNS são responsáveis por responder pelas consultas dessa zona.
+> A/AAAA ou Address Record: Mapeia um nome de domínio para um endereço IP (IPv4/IPv6).
+> MX ou Mail Exchange: Especifica os servidores de e-mail para o domínio.
+> CNAME ou Canonical Name: Define um nome de domínio como um alias para outro nome de domínio.
+> PTR ou Pointer Record: Usado em consultas reversas para mapear IPs a nomes de domínio.
+
+__Configurando new host na zona forward__
+
+_New Host (A or AAA)..._ > _configure o new host de acordo com __sua__ rede_ > _`Add Host` e `OK`_ > _new host criado_
+
+![windows server configurando dns 28](./assets/images/windows_server_2022_images/windows_server_2022_29.png)
+
+![windows server configurando dns 29](./assets/images/windows_server_2022_images/windows_server_2022_30.png)
+
+![windows server configurando dns 30](./assets/images/windows_server_2022_images/windows_server_2022_31.png)
+
+_Em Reverse Lookup Zones tem o PTR criado ao criar o new host para a zona forward_
+
+![windows server configurando dns 31](./assets/images/windows_server_2022_images/windows_server_2022_32.png)
+
+_Acesse o web page do pfsense através do nome configurado na zona_
+
+![windows server configurando dns 32](./assets/images/windows_server_2022_images/windows_server_2022_33.png)
+
 
 
 
