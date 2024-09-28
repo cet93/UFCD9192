@@ -247,13 +247,33 @@ _Ativando o Scope e Finalizando o New Scope Wizard_
 
 ![windows server configurando dhcp 12](./assets/images/windows_server_2022_images/windows_server_2022_13.png)
 
-_Autorizando e Atualizando o New Scope Criado_
+*__Autorizando__ e __Atualizando__ o New Scope Criado*
 
 ![windows server configurando dhcp 13](./assets/images/windows_server_2022_images/windows_server_2022_14.png)
 
 ![windows server configurando dhcp 14](./assets/images/windows_server_2022_images/windows_server_2022_15.png)
 
+- __Verificando a distribuição de IP via DHCP do Windows Server no Client Kali Linux__
 
+> Observação: __Atualização do cenário__; todos devem estar na mesma rede, nesse cenário temos o pfsense com 2 placas de rede (1 NAT e 1 LAN Segment), o Windows Server com 1 placa de rede (1 LAN Segment), e agora o __clien t kali linux__ possui 1 placa de rede (1 LAN Segment), se o kali linux estiver em NAT __deve__ alterar para LAN Segment.
+
+> Kali Linux deve estar no LAN Segment em vez de NAT está relacionada à necessidade de todos os dispositivos estarem na mesma rede e se comunicarem diretamente entre si.
+
+> O LAN Segment cria uma rede local virtual onde todos os dispositivos conectados estão na mesma sub-rede.
+
+> E também está relacionado ao DHCP e à distribuição de IPs. Quando o Kali Linux está em LAN Segment, ele está diretamente conectado à mesma rede que o servidor DHCP (como o pfSense e o Windows Server), o que permite que ele receba um endereço IP válido diretamente do servidor DHCP.
+
+> Se o Kali Linux estivesse em NAT, o roteador NAT seria o responsável por atribuir um IP, e o cliente Kali não receberia um IP da mesma faixa usada na rede LAN Segment, quebrando a comunicação direta entre os dispositivos e prejudicando a distribuição de IPs pelo DHCP do ambiente local.
+
+_Kali na rede NAT_
+
+![kali linux client 00](./assets/images/kali_linux_client_images/kali_linux_client_00.png)
+
+_Kali na rede LAN Segment_
+
+![kali linux client 01](./assets/images/kali_linux_client_images/kali_linux_client_00.png)
+
+> O comando __ip address__ ou __ip a__ é usado em sistemas Linux para apenas exibir os endereços IP das interfaces de rede.
 
 
 
