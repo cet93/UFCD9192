@@ -56,7 +56,9 @@ _comando: systemctl daemon-reload_
 > __systemctl daemon-reload__: recarrega a configuração dos serviços do systemd. É utilizado para que o systemd reconheça alterações feitas nos arquivos de unidade de serviço sem precisar reiniciar o sistema.
 
 
+__Criando Servidor Web HTTPD__
 
+> HTTPD é o daemon (processo em segundo plano) que roda um servidor web HTTP.
 
 
 
@@ -155,6 +157,8 @@ _LAN configurada._
 
 ![ping win server pfsense](./assets/images/pfsense_images/pfsense_15.png)
 
+> o comando __ping__ ou Packet Internet Groper é uma ferramenta de rede usada para testar a conectividade entre dois dispositivos na rede.
+
 > Observação: Ambos devem estar na mesma rede, nesse cenário temos o pfsense com 2 placas de rede (1 NAT e 1 LAN Segment), e o Windows Server temos 1 placa de rede (1 LAN Segment) na mesma rede do pfsense.
 
 - Página web do pfSense
@@ -245,7 +249,7 @@ _Exemplo_:
 
 > Verifique na placa de rede do Windows Server se a configuração do __Preferred DNS Server__ e __Alternate DNS Server__ ou mantiveram as configurações feitas para os DNS ou foi feito o override automaticamente voltando para o __IP Loopback__ `127.0.0.1`. Se tiver feito o override, reconfigure os DNS (novamente) de acordo com a __sua__ rede, em `Internet Protocol Version 4 (TCP/IPv4)` acessando suas propriedades.
 
-![windows server dns loopback](./assets/images/windows_server_2022_images/windows_server_2022_00.png)
+![windows server dns loopback 00](./assets/images/windows_server_2022_images/windows_server_2022_00.png)
 
 > __IP Loopback 127.0.0.1__: é um endereço IP especial que aponta para o próprio dispositivo em que ele é usado, chamado de "localhost", ele é utilizado para testar e diagnosticar a conectividade de rede local, sem precisar de uma rede externa.
 
@@ -257,25 +261,25 @@ _Exemplo_:
 
 > Em `__Tools__ > __DHCP__`, em `__IPv4__ > __New Scope...__`
 
-![windows server configurando dhcp 00](./assets/images/windows_server_2022_images/windows_server_2022_01.png)
+![windows server configurando dhcp 01](./assets/images/windows_server_2022_images/windows_server_2022_01.png)
 
-![windows server configurando dhcp 01](./assets/images/windows_server_2022_images/windows_server_2022_02.png)
+![windows server configurando dhcp 02](./assets/images/windows_server_2022_images/windows_server_2022_02.png)
 
 > Aqui estamos no Wizard para definir o scope. Clica em `Next`.
 
-![windows server configurando dhcp 02](./assets/images/windows_server_2022_images/windows_server_2022_03.png)
+![windows server configurando dhcp 03](./assets/images/windows_server_2022_images/windows_server_2022_03.png)
 
 > Configure o __Name__ e o __Description__ de acordo com a __sua__ rede. E clica em `Next`.
 
-![windows server configurando dhcp 03](./assets/images/windows_server_2022_images/windows_server_2022_04.png)
+![windows server configurando dhcp 04](./assets/images/windows_server_2022_images/windows_server_2022_04.png)
 
 > Configure o __range__ entre os IPs (Start/End IP address). Configure a máscara __subnet mask__. De acordo com a __sua__ rede. E clica em `Next`.
 
-![windows server configurando dhcp 04](./assets/images/windows_server_2022_images/windows_server_2022_05.png)
+![windows server configurando dhcp 05](./assets/images/windows_server_2022_images/windows_server_2022_05.png)
 
 > Aqui consegue-se configurar o __exclusão__ entre os IPs. Isso significa que o DHCP não vai utilizá-los e tens os IPs para configuração estática para outros dispositivos, como impressoras.
 
-![windows server configurando dhcp 05](./assets/images/windows_server_2022_images/windows_server_2022_06.png)
+![windows server configurando dhcp 06](./assets/images/windows_server_2022_images/windows_server_2022_06.png)
 
 > No __Lease Duration__ refere-se ao período de tempo que um endereço IP é atribuído a um dispositivo em uma rede. Quando um dispositivo recebe um IP do servidor DHCP, ele "aluga" o endereço IP por um tempo definido, chamado de "lease duration". Quando o lease está perto de expirar, o dispositivo tenta renovar o IP com o servidor DHCP.
 
@@ -283,31 +287,31 @@ _Exemplo_:
 
 > Clica em `Next` após definir o seu Lease Duration.
 
-![windows server configurando dhcp 06](./assets/images/windows_server_2022_images/windows_server_2022_07.png)
+![windows server configurando dhcp 07](./assets/images/windows_server_2022_images/windows_server_2022_07.png)
 
 > O __Configure DHCP Options__ refere-se à configuração de opções adicionais para os dispositivos que recebem endereços IP de um servidor DHCP. Fornecem informações adicionais; __Gateway__, __Domain Name__, __DNS Servers__ e __WINS Servers__.
 
 > Aqui já irá configurar essas opções, pois estar sendo selecionado que sim e clicando em `Next`. Configure de acordo com a __sua__ rede.
 
-![windows server configurando dhcp 07](./assets/images/windows_server_2022_images/windows_server_2022_08.png)
+![windows server configurando dhcp 08](./assets/images/windows_server_2022_images/windows_server_2022_08.png)
 
-![windows server configurando dhcp 08](./assets/images/windows_server_2022_images/windows_server_2022_09.png)
+![windows server configurando dhcp 09](./assets/images/windows_server_2022_images/windows_server_2022_09.png)
 
-![windows server configurando dhcp 09](./assets/images/windows_server_2022_images/windows_server_2022_10.png)
+![windows server configurando dhcp 10](./assets/images/windows_server_2022_images/windows_server_2022_10.png)
 
-![windows server configurando dhcp 10](./assets/images/windows_server_2022_images/windows_server_2022_11.png)
+![windows server configurando dhcp 11](./assets/images/windows_server_2022_images/windows_server_2022_11.png)
 
 _Ativando o Scope e Finalizando o New Scope Wizard_
 
-![windows server configurando dhcp 11](./assets/images/windows_server_2022_images/windows_server_2022_12.png)
+![windows server configurando dhcp 12](./assets/images/windows_server_2022_images/windows_server_2022_12.png)
 
-![windows server configurando dhcp 12](./assets/images/windows_server_2022_images/windows_server_2022_13.png)
+![windows server configurando dhcp 13](./assets/images/windows_server_2022_images/windows_server_2022_13.png)
 
 *__Autorizando__ e __Atualizando__ o New Scope Criado*
 
-![windows server configurando dhcp 13](./assets/images/windows_server_2022_images/windows_server_2022_14.png)
+![windows server configurando dhcp 14](./assets/images/windows_server_2022_images/windows_server_2022_14.png)
 
-![windows server configurando dhcp 14](./assets/images/windows_server_2022_images/windows_server_2022_15.png)
+![windows server configurando dhcp 15](./assets/images/windows_server_2022_images/windows_server_2022_15.png)
 
 ---
 ---
@@ -400,19 +404,19 @@ __Configurar DNS Fowarders__
 
 _Tools_ > _DNS_ >_Forward_ > _Properties_
 
-![windows server configurando dns 15](./assets/images/windows_server_2022_images/windows_server_2022_16.png)
+![windows server configurando dns 16](./assets/images/windows_server_2022_images/windows_server_2022_16.png)
 
-![windows server configurando dns 16](./assets/images/windows_server_2022_images/windows_server_2022_17.png)
+![windows server configurando dns 17](./assets/images/windows_server_2022_images/windows_server_2022_17.png)
 
 _Edit_ > _Adiciona IPs de DNS relevantes para __sua__ rede_ > _Clica `OK`_ > _`Apply` e `OK`_
 
-![windows server configurando dns 17](./assets/images/windows_server_2022_images/windows_server_2022_18.png)
+![windows server configurando dns 18](./assets/images/windows_server_2022_images/windows_server_2022_18.png)
 
-![windows server configurando dns 18](./assets/images/windows_server_2022_images/windows_server_2022_19.png)
+![windows server configurando dns 19](./assets/images/windows_server_2022_images/windows_server_2022_19.png)
 
-![windows server configurando dns 19](./assets/images/windows_server_2022_images/windows_server_2022_20.png)
+![windows server configurando dns 20](./assets/images/windows_server_2022_images/windows_server_2022_20.png)
 
-![windows server configurando dns 20](./assets/images/windows_server_2022_images/windows_server_2022_21.png)
+![windows server configurando dns 21](./assets/images/windows_server_2022_images/windows_server_2022_21.png)
 
 > __DNS Forward Zone__ é uma configuração no servidor DNS que define como as consultas para domínios específicos serão encaminhadas para outro servidor DNS, chamado de forwarder. Em uma Forward Zone, o servidor DNS não tenta resolver as consultas por conta própria; em vez disso, ele encaminha todas as solicitações de resolução de nome para um servidor DNS externo.
 
@@ -426,21 +430,21 @@ __Configurando Reverse Lookup Zone__
 
 _Reverse Lookup Zones_ > _New Zone..._ > `Next` > _Primary Zone_ > _... domain controllers in this domain: ..._ e _`Next`_ > _IPv4 Reverse Lookup Zone_
 
-![windows server configurando dns 21](./assets/images/windows_server_2022_images/windows_server_2022_22.png)
+![windows server configurando dns 22](./assets/images/windows_server_2022_images/windows_server_2022_22.png)
 
-![windows server configurando dns 22](./assets/images/windows_server_2022_images/windows_server_2022_23.png)
+![windows server configurando dns 23](./assets/images/windows_server_2022_images/windows_server_2022_23.png)
 
-![windows server configurando dns 23](./assets/images/windows_server_2022_images/windows_server_2022_24.png)
+![windows server configurando dns 24](./assets/images/windows_server_2022_images/windows_server_2022_24.png)
 
-![windows server configurando dns 24](./assets/images/windows_server_2022_images/windows_server_2022_25.png)
+![windows server configurando dns 25](./assets/images/windows_server_2022_images/windows_server_2022_25.png)
 
 _Configure o __Reverse lookup zone name__ de acordo com __sua__ rede_ > _Allow only secure dynamic updates..._ > `Finish`
 
-![windows server configurando dns 25](./assets/images/windows_server_2022_images/windows_server_2022_26.png)
+![windows server configurando dns 26](./assets/images/windows_server_2022_images/windows_server_2022_26.png)
 
-![windows server configurando dns 26](./assets/images/windows_server_2022_images/windows_server_2022_27.png)
+![windows server configurando dns 27](./assets/images/windows_server_2022_images/windows_server_2022_27.png)
 
-![windows server configurando dns 27](./assets/images/windows_server_2022_images/windows_server_2022_28.png)
+![windows server configurando dns 28](./assets/images/windows_server_2022_images/windows_server_2022_28.png)
 
 *__SOA__ ou Start of Authority é um registro DNS que contém informações sobre a zona, incluindo o servidor DNS principal, o contato administrativo, e o número de série para controlar atualizações. Ele define como a zona é gerenciada e sincronizada entre servidores DNS primários e secundários.*
 
@@ -455,35 +459,110 @@ __Configurando new host na zona forward__
 
 _New Host (A or AAA)..._ > _configure o new host de acordo com __sua__ rede_ > _`Add Host` e `OK`_ > _new host criado_
 
-![windows server configurando dns 28](./assets/images/windows_server_2022_images/windows_server_2022_29.png)
+![windows server configurando dns 29](./assets/images/windows_server_2022_images/windows_server_2022_29.png)
 
-![windows server configurando dns 29](./assets/images/windows_server_2022_images/windows_server_2022_30.png)
+![windows server configurando dns 30](./assets/images/windows_server_2022_images/windows_server_2022_30.png)
 
-![windows server configurando dns 30](./assets/images/windows_server_2022_images/windows_server_2022_31.png)
+![windows server configurando dns 31](./assets/images/windows_server_2022_images/windows_server_2022_31.png)
 
 _Em Reverse Lookup Zones tem o PTR criado ao criar o new host para a zona forward_
 
-![windows server configurando dns 31](./assets/images/windows_server_2022_images/windows_server_2022_32.png)
+![windows server configurando dns 32](./assets/images/windows_server_2022_images/windows_server_2022_32.png)
 
 _Acesse o web page do pfsense através do nome configurado na zona_
 
-![windows server configurando dns 32](./assets/images/windows_server_2022_images/windows_server_2022_33.png)
+![windows server configurando dns 33](./assets/images/windows_server_2022_images/windows_server_2022_33.png)
  
 _Verifica se o DNS configurado das zonas estão a funcionar de acordo_
 
-![windows server configurando dns 33](./assets/images/windows_server_2022_images/windows_server_2022_34.png)
+![windows server configurando dns 34](./assets/images/windows_server_2022_images/windows_server_2022_34.png)
 
 > `nslookup` é uma ferramenta de linha de comando usada para consultar servidores DNS e obter informações sobre o mapeamento entre nomes de domínio e endereços IP. Ele permite verificar se um domínio está corretamente resolvendo para um endereço IP, identificar o servidor DNS responsável por uma zona, e fazer consultas de registros DNS.
 
 **_Como saber se o dns está bem configurado através da url somente?_**
 
+---
+---
 
 ## IIS Windows Server 2022
 
+> __IIS__ ou Internet Information Services, é um servidor web desenvolvido pela Microsoft que roda em sistemas Windows. Ele permite hospedar sites, aplicações web e serviços web, o IIS pode lidar com protocolos como HTTP, HTTPS, FTP, e SMTP para fornecer serviços de rede.
+
+__Instalando o IIS__
+
+Em `Manage` > `Add Roles and Features` > `Next` > `Next` > `Next`
+
+![windows server configurando iis 35](./assets/images/windows_server_2022_images/windows_server_2022_35.png)
+
+![windows server configurando iis 36](./assets/images/windows_server_2022_images/windows_server_2022_36.png)
+
+![windows server configurando iis 37](./assets/images/windows_server_2022_images/windows_server_2022_37.png)
+
+![windows server configurando iis 38](./assets/images/windows_server_2022_images/windows_server_2022_38.png)
+
+Selecione `Web Server (IIS)` > `Add Features` > Verifique se está selecionado e clica `Next` > `Next`
+
+![windows server configurando iis 39](./assets/images/windows_server_2022_images/windows_server_2022_39.png)
+
+![windows server configurando iis 40](./assets/images/windows_server_2022_images/windows_server_2022_40.png)
+
+![windows server configurando iis 41](./assets/images/windows_server_2022_images/windows_server_2022_41.png)
+
+![windows server configurando iis 42](./assets/images/windows_server_2022_images/windows_server_2022_42.png)
+
+Em _Web Server Role (IIS)_ clica `Next` > `Next` > `Install` > Após concluir clica em `close` > _Serviço IIS instalado_
+
+![windows server configurando iis 43](./assets/images/windows_server_2022_images/windows_server_2022_43.png)
+
+![windows server configurando iis 44](./assets/images/windows_server_2022_images/windows_server_2022_44.png)
+
+![windows server configurando iis 45](./assets/images/windows_server_2022_images/windows_server_2022_45.png)
+
+![windows server configurando iis 46](./assets/images/windows_server_2022_images/windows_server_2022_46.png)
+
+![windows server configurando iis 47](./assets/images/windows_server_2022_images/windows_server_2022_47.png)
+
+No browser verifica se o Internet Information Services estar online, digitando _localhost_ ou o _IP do servidor_ na url (pois ambos são sinônimos).
+
+![windows server configurando iis 48](./assets/images/windows_server_2022_images/windows_server_2022_48.png)
+
+__Criando entrada DNS para acesso ao web page__
+
+- Acessando o web page via nome e não ip ou localhost.
+
+Em `Tools` > `DNS` > `Forward Lookup Zone` > _selecione a zona para adicionar new host_ > `new host`
+
+![windows server configurando dns new host 49](./assets/images/windows_server_2022_images/windows_server_2022_49.png)
+
+_Configure o new host de acordo com a sua rede_ > `Add Host` > _criado e `OK`_
+
+![windows server configurando dns new host 50](./assets/images/windows_server_2022_images/windows_server_2022_50.png)
+
+![windows server configurando dns new host 51](./assets/images/windows_server_2022_images/windows_server_2022_51.png)
+
+*Criado o new host __www__* > _faça o restart do DNS_ > *_verifica na zona reverse se criou o PTR para o __www__*
+
+![windows server configurando dns new host 52](./assets/images/windows_server_2022_images/windows_server_2022_52.png)
+
+![windows server configurando dns new host 53](./assets/images/windows_server_2022_images/windows_server_2022_53.png)
+
+![windows server configurando dns new host 54](./assets/images/windows_server_2022_images/windows_server_2022_54.png)
+
+_nslookup e ping ao www_ > _acessando o web page via nome_
+
+![windows server configurando dns new host 55](./assets/images/windows_server_2022_images/windows_server_2022_55.png)
+
+![windows server configurando dns new host 56](./assets/images/windows_server_2022_images/windows_server_2022_56.png)
+
+
+
+---
+---
 
 ### ACTIVE DIRECTORY AD
 
 > Active Directory (AD) é um serviço da Microsoft que gerencia e organiza redes de computadores em ambientes corporativos. Ele permite que administradores controlem o acesso a recursos. O AD usa um banco de dados centralizado para armazenar informações sobre contas de usuário, computadores e outros objetos da rede, facilitando a gestão e segurança de grandes redes empresariais.
+
 
 ##### DOMAIN/FOREST
 
