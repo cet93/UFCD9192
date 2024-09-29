@@ -7,10 +7,10 @@
 
 > Red Hat é uma empresa de tecnologia que desenvolve soluções de software de código aberto, conhecida principalmente por seu sistema operacional Red Hat Enterprise Linux (RHEL). A empresa oferece produtos e serviços voltados para infraestrutura de TI, nuvem, virtualização e containers, com um forte foco em soluções baseadas em Linux.
 
-> __COMANDOS__:\
-> - `pwd` ou _print working directory_ é usado para mostrar o diretório atual em que está trabalhando no terminal. \
-> - `touch` é usado para criar arquivos vazios.\
-> - `nano` é um editor de texto, é usado diretamente no terminal para criar, editar e visualizar arquivos de texto.\
+> __COMANDOS__:
+> - `pwd` ou _print working directory_ é usado para mostrar o diretório atual em que está trabalhando no terminal.
+> - `touch` é usado para criar arquivos vazios.
+> - `nano` é um editor de texto, é usado diretamente no terminal para criar, editar e visualizar arquivos de texto.
 > - `systemctl` é usado para gerenciar serviços no systemd.
 
 __Criando um serviço__
