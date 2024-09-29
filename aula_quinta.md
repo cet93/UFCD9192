@@ -42,11 +42,23 @@ _comando: systemctl enable failover_
 
 ![red hat server serviço 04](./assets/images/red_hat_server_images/red_hat_server_04.png)
 
+_comando: systemctl daemon-reload_
+
+- _o __status__ do serviço a __falhar__ > feito __nano__ para __alteração e debug__ do código criado para o serviço de failover > __daemon reload__ para recarrega a configuração dos serviços do systemd > __restart__ do serviço de failover > agora o __status funcionando__ para o serviço criado de failover._
+
+![red hat server serviço 05](./assets/images/red_hat_server_images/red_hat_server_05.png)
+
 > __systemctl start serviço__: Inicia o serviço.\
 > __systemctl stop serviço__: Para o serviço.\
 > __systemctl status serviço__: Mostra o status do serviço.\
 > __systemctl restart serviço__: Reinicia o serviço.\
-> __systemctl enable serviço__: Configura o serviço para iniciar automaticamente ao iniciar o sistema operativo.
+> __systemctl enable serviço__: Configura o serviço para iniciar automaticamente ao iniciar o sistema operativo.\
+> __systemctl daemon-reload__: recarrega a configuração dos serviços do systemd. É utilizado para que o systemd reconheça alterações feitas nos arquivos de unidade de serviço sem precisar reiniciar o sistema.
+
+
+
+
+
 
 
 # PFSENSE
@@ -237,6 +249,8 @@ _Exemplo_:
 
 > __IP Loopback 127.0.0.1__: é um endereço IP especial que aponta para o próprio dispositivo em que ele é usado, chamado de "localhost", ele é utilizado para testar e diagnosticar a conectividade de rede local, sem precisar de uma rede externa.
 
+## DHCP Windows Server 2022
+
 - Windows Server 2022 Configurando __DHCP__
 
 > __DHCP__: Dynamic Host Configuration Protocol é um protocolo que automaticamente atribui endereços IP e outras configurações de rede a dispositivos em uma rede.
@@ -368,7 +382,15 @@ _Em `Accept` > `MITM Menu` > `ARP Poisoning` > `OK` > `Ettercap Menu` > `Hosts` 
 
 ![kali linux client 16](./assets/images/kali_linux_client_images/kali_linux_client_16.png)
 
-### DNS
+
+__TROUBLESHOOTING__:
+
+
+---
+---
+
+
+## DNS
 
 > DNS (Domain Name System) é o sistema que traduz nomes de domínio legíveis (como www.exemplo.com) em endereços IP numéricos (como 192.168.1.1) que os computadores usam para se comunicar entre si, funciona como uma "agenda telefônica" da internet.
 
@@ -453,9 +475,10 @@ _Verifica se o DNS configurado das zonas estão a funcionar de acordo_
 
 > `nslookup` é uma ferramenta de linha de comando usada para consultar servidores DNS e obter informações sobre o mapeamento entre nomes de domínio e endereços IP. Ele permite verificar se um domínio está corretamente resolvendo para um endereço IP, identificar o servidor DNS responsável por uma zona, e fazer consultas de registros DNS.
 
-_Como saber se o dns está bem configurado através da url somente?_
+**_Como saber se o dns está bem configurado através da url somente?_**
 
 
+## IIS Windows Server 2022
 
 
 ### ACTIVE DIRECTORY AD
