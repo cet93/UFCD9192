@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CET 93</title>
+  </head>
+  <body>
+    <h1>2024-09-17 Nessus</h1>
+
+    <div>
+      <h2>Kali - Fazer download do Nessus</h2>
+      <p>
+        No Kali, navegar até ao site: https://www.tenable.com/products/nessus/nessus-essentials
+        Efetuar o download do Nessus Essentials
+      </p>
+      <div style="text-align: center">
+        <img
+          src="./image/nessus_download.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+      <p>
+        Após fazer o registo, proceder ao download.
+      </p>
+      <div style="text-align: center">
+        <img
+          src="./image/nessus_download2.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+      <p>
+        Selecionar a plataforma Debian - amd64, selecionar Download.
+      </p>
+      <div style="text-align: center">
+        <img
+          src="./image/nessus_download3.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+
+      <h2>Kali - Instalar o Nessus</h2>
+      <p>
+        No terminal, navegar até à pasta onde foi feito o download do Nessus.
+      </p>
+      <p>
+        sudo su
+      </p>
+      <p>
+        cd Downloads
+      </p>
+      <p>
+        Executar o comando "dpkg -i Nessus-8.15.0-debian6_amd64.deb"
+      </p>
+      <div style="text-align: center">
+        <img
+          src="./image/nessus_install.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+
+      <h2>Kali - Iniciar o Nessus</h2>
+      <p>
+        Executar o comando "systemctl start nessusd"
+      </p>
+      <p>
+        Executar o comando "systemctl enable nessusd"
+      </p>
+      <p>
+        Executar o comando "systemctl status nessusd"
+      </p>
+      
+      <div style="text-align: center">
+        <img
+          src="./image/nessus_start.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+
+      <h2>Kali - Aceder ao Nessus</h2>
+      <p>
+        No browser, aceder a https://localhost:8834
+      </p>
+      <p>
+        Selecionar Continue.
+      </p>
+      <div style="text-align: center">
+        <img
+          src="./image/nessus_continue.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+      <p>
+        De seguida selecionar "Register for Nessus Essentials" e selecionar Continue.
+      </p>
+      <div style="text-align: center">
+        <img
+          src="./image/nessus_register.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+
+      <h2>Nessus formulário</h2>    
+      <p>
+        Não é necessário registar se já efetuámos o registo no site. Neste caso selecionamos Skip
+        Preencher o formulário e selecionar "Register".
+      </p>
+      <div style="text-align: center">
+        <img
+          src="./image/nessus_form.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+
+      <h2>Nessus - Activation code</h2>
+      <p>
+        Copiar o Activation code e colar no campo "Activation code" e selecionar "Continue".
+      </p>
+      <div style="text-align: center">
+        <img
+          src="./image/nessus_activation.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+
+      <h2>Nessus - Criar conta de utilizador</h2>
+      <p>
+        Criar uma conta de utilizador e selecionar "Submit".
+        (Se der erro, tentar novamente, sem ser através da firewall)
+      </p>
+      <div style="text-align: center">
+        <img
+          src="./image/nessus_create_user.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+
+      <h2>Nessus - Download Plugins</h2>
+      <p>
+        Esprar que o NEssus faça o "Download Plugins".
+      </p>
+      <div style="text-align: center">
+        <img
+          src="./image/nessus_download_plugins.png"
+          alt="1"
+          style="width: 50%"
+        />
+      </div>
+
+      
+    </div>
+
+  </body>
+</html>
