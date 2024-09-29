@@ -7,6 +7,30 @@
 
 > Red Hat é uma empresa de tecnologia que desenvolve soluções de software de código aberto, conhecida principalmente por seu sistema operacional Red Hat Enterprise Linux (RHEL). A empresa oferece produtos e serviços voltados para infraestrutura de TI, nuvem, virtualização e containers, com um forte foco em soluções baseadas em Linux.
 
+> __COMANDOS__:
+> - `pwd` ou _print working directory_ é usado para mostrar o diretório atual em que está trabalhando no terminal. 
+> - `touch` é usado para criar arquivos vazios.
+> - `nano` é um editor de texto, é usado diretamente no terminal para criar, editar e visualizar arquivos de texto.
+
+
+__Criando um serviço__
+
+_Criando e visualizando arquivo_:
+
+![red hat server serviço 00](./assets/images/red_hat_server_images/red_hat_server_00.png)
+
+_Editando arquivo_:
+
+![red hat server serviço 01](./assets/images/red_hat_server_images/red_hat_server_01.png)
+
+> Arquivo de unidade de serviço para o systemd:
+> `[Unit]`: Define informações gerais do serviço e ele será iniciado após a rede estar disponível (After=network.target).
+> `[Service]`: Especifica o comando que será executado quando o serviço for iniciado.
+> `[Install]`: Define quando o serviço será ativado. Ele será iniciado no modo de múltiplos usuários (multi-user.target).
+
+
+
+
 # PFSENSE
 
 > O pfSense é um firewall de código aberto e uma distribuição de roteamento baseada no sistema operacional FreeBSD. Ele oferece uma solução completa para gerenciamento de rede.
@@ -404,7 +428,7 @@ _Em Reverse Lookup Zones tem o PTR criado ao criar o new host para a zona forwar
 _Acesse o web page do pfsense através do nome configurado na zona_
 
 ![windows server configurando dns 32](./assets/images/windows_server_2022_images/windows_server_2022_33.png)
-
+ 
 _Verifica se o DNS configurado das zonas estão a funcionar de acordo_
 
 ![windows server configurando dns 33](./assets/images/windows_server_2022_images/windows_server_2022_34.png)
