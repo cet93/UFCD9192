@@ -11,7 +11,7 @@
 > - `pwd` ou _print working directory_ é usado para mostrar o diretório atual em que está trabalhando no terminal. 
 > - `touch` é usado para criar arquivos vazios.
 > - `nano` é um editor de texto, é usado diretamente no terminal para criar, editar e visualizar arquivos de texto.
-
+> - `systemctl` é usado para gerenciar serviços no systemd.
 
 __Criando um serviço__
 
@@ -19,7 +19,7 @@ _Criando e visualizando arquivo_:
 
 ![red hat server serviço 00](./assets/images/red_hat_server_images/red_hat_server_00.png)
 
-_Editando arquivo_:
+_Editando arquivo e reiniciando serviço_:
 
 ![red hat server serviço 01](./assets/images/red_hat_server_images/red_hat_server_01.png)
 
@@ -28,7 +28,25 @@ _Editando arquivo_:
 > `[Service]`: Especifica o comando que será executado quando o serviço for iniciado.
 > `[Install]`: Define quando o serviço será ativado. Ele será iniciado no modo de múltiplos usuários (multi-user.target).
 
+_comando: systemctl restart failover_
 
+![red hat server serviço 02](./assets/images/red_hat_server_images/red_hat_server_02.png)
+
+> Systemd é um sistema de inicialização e gerenciamento de serviços usado em várias distribuições Linux.
+
+_comando: systemctl status failover_
+
+![red hat server serviço 03](./assets/images/red_hat_server_images/red_hat_server_03.png)
+
+_comando: systemctl enable failover_
+
+![red hat server serviço 04](./assets/images/red_hat_server_images/red_hat_server_04.png)
+
+> __systemctl start serviço__: Inicia o serviço.
+> __systemctl stop serviço__: Para o serviço.
+> __systemctl status serviço__: Mostra o status do serviço.
+> __systemctl restart serviço__: Reinicia o serviço.
+> __systemctl enable serviço__: Configura o serviço para iniciar automaticamente ao iniciar o sistema operativo.
 
 
 # PFSENSE
