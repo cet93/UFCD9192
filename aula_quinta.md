@@ -477,13 +477,60 @@ _Verifica se o DNS configurado das zonas estão a funcionar de acordo_
 
 **_Como saber se o dns está bem configurado através da url somente?_**
 
+---
+---
 
 ## IIS Windows Server 2022
 
+> __IIS__ ou Internet Information Services, é um servidor web desenvolvido pela Microsoft que roda em sistemas Windows. Ele permite hospedar sites, aplicações web e serviços web, o IIS pode lidar com protocolos como HTTP, HTTPS, FTP, e SMTP para fornecer serviços de rede.
+
+__Instalando o IIS__
+
+Em `Manage` > `Add Roles and Features` > `Next` > `Next` > `Next`
+
+![windows server configurando iis 34](./assets/images/windows_server_2022_images/windows_server_2022_35.png)
+
+![windows server configurando iis 35](./assets/images/windows_server_2022_images/windows_server_2022_36.png)
+
+![windows server configurando iis 36](./assets/images/windows_server_2022_images/windows_server_2022_37.png)
+
+![windows server configurando iis 37](./assets/images/windows_server_2022_images/windows_server_2022_38.png)
+
+Selecione `Web Server (IIS)` > `Add Features` > Verifique se está selecionado e clica `Next` > `Next`
+
+![windows server configurando iis 38](./assets/images/windows_server_2022_images/windows_server_2022_39.png)
+
+![windows server configurando iis 39](./assets/images/windows_server_2022_images/windows_server_2022_40.png)
+
+![windows server configurando iis 40](./assets/images/windows_server_2022_images/windows_server_2022_41.png)
+
+![windows server configurando iis 41](./assets/images/windows_server_2022_images/windows_server_2022_42.png)
+
+Em _Web Server Role (IIS)_ clica `Next` > `Next` > `Install` > Após concluir clica em `close` > _Serviço IIS instalado_
+
+![windows server configurando iis 42](./assets/images/windows_server_2022_images/windows_server_2022_43.png)
+
+![windows server configurando iis 43](./assets/images/windows_server_2022_images/windows_server_2022_44.png)
+
+![windows server configurando iis 44](./assets/images/windows_server_2022_images/windows_server_2022_45.png)
+
+![windows server configurando iis 45](./assets/images/windows_server_2022_images/windows_server_2022_46.png)
+
+![windows server configurando iis 46](./assets/images/windows_server_2022_images/windows_server_2022_47.png)
+
+
+
+
+
+
+
+---
+---
 
 ### ACTIVE DIRECTORY AD
 
 > Active Directory (AD) é um serviço da Microsoft que gerencia e organiza redes de computadores em ambientes corporativos. Ele permite que administradores controlem o acesso a recursos. O AD usa um banco de dados centralizado para armazenar informações sobre contas de usuário, computadores e outros objetos da rede, facilitando a gestão e segurança de grandes redes empresariais.
+
 
 ##### DOMAIN/FOREST
 
