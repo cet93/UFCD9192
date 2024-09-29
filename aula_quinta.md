@@ -7,10 +7,10 @@
 
 > Red Hat é uma empresa de tecnologia que desenvolve soluções de software de código aberto, conhecida principalmente por seu sistema operacional Red Hat Enterprise Linux (RHEL). A empresa oferece produtos e serviços voltados para infraestrutura de TI, nuvem, virtualização e containers, com um forte foco em soluções baseadas em Linux.
 
-> __COMANDOS__:
-> - `pwd` ou _print working directory_ é usado para mostrar o diretório atual em que está trabalhando no terminal. 
-> - `touch` é usado para criar arquivos vazios.
-> - `nano` é um editor de texto, é usado diretamente no terminal para criar, editar e visualizar arquivos de texto.
+> __COMANDOS__:\
+> - `pwd` ou _print working directory_ é usado para mostrar o diretório atual em que está trabalhando no terminal. \
+> - `touch` é usado para criar arquivos vazios.\
+> - `nano` é um editor de texto, é usado diretamente no terminal para criar, editar e visualizar arquivos de texto.\
 > - `systemctl` é usado para gerenciar serviços no systemd.
 
 __Criando um serviço__
@@ -23,9 +23,9 @@ _Editando arquivo e reiniciando serviço_:
 
 ![red hat server serviço 01](./assets/images/red_hat_server_images/red_hat_server_01.png)
 
-> Arquivo de unidade de serviço para o systemd:
-> `[Unit]`: Define informações gerais do serviço e ele será iniciado após a rede estar disponível (After=network.target).
-> `[Service]`: Especifica o comando que será executado quando o serviço for iniciado.
+> Arquivo de unidade de serviço para o systemd:\
+> `[Unit]`: Define informações gerais do serviço e ele será iniciado após a rede estar disponível (After=network.target).\
+> `[Service]`: Especifica o comando que será executado quando o serviço for iniciado.\
 > `[Install]`: Define quando o serviço será ativado. Ele será iniciado no modo de múltiplos usuários (multi-user.target).
 
 _comando: systemctl restart failover_
@@ -42,10 +42,10 @@ _comando: systemctl enable failover_
 
 ![red hat server serviço 04](./assets/images/red_hat_server_images/red_hat_server_04.png)
 
-> __systemctl start serviço__: Inicia o serviço.
-> __systemctl stop serviço__: Para o serviço.
-> __systemctl status serviço__: Mostra o status do serviço.
-> __systemctl restart serviço__: Reinicia o serviço.
+> __systemctl start serviço__: Inicia o serviço.\
+> __systemctl stop serviço__: Para o serviço.\
+> __systemctl status serviço__: Mostra o status do serviço.\
+> __systemctl restart serviço__: Reinicia o serviço.\
 > __systemctl enable serviço__: Configura o serviço para iniciar automaticamente ao iniciar o sistema operativo.
 
 
