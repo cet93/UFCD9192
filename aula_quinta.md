@@ -58,9 +58,27 @@ _comando: systemctl daemon-reload_
 
 __Criando Servidor Web HTTPD__
 
-> HTTPD é o daemon (processo em segundo plano) que roda um servidor web HTTP.
+> HTTPD é o _daemon (processo em segundo plano)_ que roda um servidor web HTTP.
 
+Instalar o __http__ com o comando: _yum install httpd_ > _systemctl restart httpd_ > _systemctl status httpd_
 
+![red hat server http 06](./assets/images/red_hat_server_images/red_hat_server_06.png)
+
+Permitir o firewall para o serviço __http__ e __port 80__: _firewall-cmd --permanent --add-service=http_ e _firewall-cmd --permanent --add-port=80/tcp_ > fazer reload para assumir novas regras _firewall-cmd --reload_ > _acesse o web page do web server pelo ip_
+
+![red hat server http 07](./assets/images/red_hat_server_images/red_hat_server_07.png)
+
+![red hat server http 08](./assets/images/red_hat_server_images/red_hat_server_08.png)
+
+listar __serviços__ e __portas__ adicionados ao firewall: _firewall-cmd --list-services_ e _firewall-cmd --list-ports_
+
+![red hat server http 09](./assets/images/red_hat_server_images/red_hat_server_09.png)
+
+iniciar e verificar serviço __cockpit__: _systemctl start cockpit_ e _systemctl status cockpit_
+
+![red hat server cockpit 10](./assets/images/red_hat_server_images/red_hat_server_10.png)
+
+> __Cockpit__ é uma ferramenta de gerenciamento gráfico para servidores Linux que permite monitorar e administrar o sistema por meio de uma interface web, facilitando o gerenciamento tanto local quanto remotamente.
 
 
 # PFSENSE
