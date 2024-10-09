@@ -10,26 +10,75 @@
 
     <div>
       <h2>Openvas - Instalar</h2>
-      <p>
-        No Kali, numa elevated prompt, instalar o Openvas.
-      </p>
+      <p>No Kali, numa elevated prompt, instalar o Openvas.</p>
       <pre>
         <code>
           sudo apt update                      
           sudo apt upgrade -y
           sudo apt dist-upgrade -y
           apt install openvas
+          gvm-setup
+          gvm-check-setup
         </code>
       </pre>
       <div style="text-align: center">
-        <img
-          src="./image/openvas_install.png"
-          alt="1"
-          style="width: 50%"
-        />
+        <img src="./image/openvas_install.png" alt="1" style="width: 50%" />
       </div>
-      
+
+      <h2>Openvas - Alterar password</h2>
+      <pre>
+        <code>
+          gvmd --user=admin --new-password=passwd;
+        </code>
+      </pre>
+
+      <h2>Openvas - Iniciar e Parar</h2>
+      <pre>
+        <code>
+          sudo gvm-start
+          sudo gvm-stop
+        </code>
+      </pre>
     </div>
 
-  </body>
+    <div>
+      <h2>Openvas - Atualizar</h2>
+      <p>Para atualizar a base de dados de vulnerabilidades, executar o seguinte comando:</p>
+      <pre>
+        <code>
+          sudo greenbone-nvt-sync
+          sudo greenbone-scapdata-sync
+          sudo greenbone-certdata-sync
+        </code>
+      </pre>
+    </div>
+
+    <div>
+      <h2>Openvas - Utilização</h2>
+      <p>Para aceder ao Openvas, abrir um browser e aceder a https://127.0.0.1:9392</p>
+
+    </div>
+
+    <div>
+      <h2>Openvas - Criar utilizador</h2>
+      <p>Para criar um utilizador, executar o seguinte comando:</p>
+      <pre>
+        <code>
+          sudo runuser -u _gvm -- gvmd --create-user=admin2 --new-password=12345
+        </code>
+      </pre>
+    </div>
+
+    <div>
+      <h2>Openvas - Alterar password</h2>
+      <p>Para alterar a password de um utilizador, executar o seguinte comando:</p>
+      <pre>
+        <code>
+          sudo runuser -u _gvm -- gvmd --user=admin --new-password=new_password
+        </code>
+      </pre>
+    </div>
+
+
+    </body>
 </html>
