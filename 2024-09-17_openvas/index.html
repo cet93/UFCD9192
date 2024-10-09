@@ -18,12 +18,47 @@
           sudo apt dist-upgrade -y
           apt install openvas
           gvm-setup
-          gvm-check-setup
+
         </code>
       </pre>
       <div style="text-align: center">
         <img src="./image/openvas_install.png" alt="1" style="width: 50%" />
       </div>
+
+      <h2>Openvas - Configurar</h2>
+      <p>Executar o seguinte comando para configurar o Openvas:</p>
+      <pre>
+        <code>
+          sudo gvm-check-setup
+        </code>
+      </pre>
+
+      <h2>Openvas - Fix</h2>
+      <p>Se for necessário executar o seguinte Fix (se necessário repetir o gvm-check-setup e gvm-check-setup):</p>
+      <pre>
+        <code>
+          sudo runuser -u postgres -- /usr/share/gvm/create-postgresql-database
+          sudo runuser -u postgres -- psql -c "ALTER DATABASE postgres REFRESH COLLATION VERSION;"
+          sudo runuser -u postgres -- psql -d postgres -c "REINDEX DATABASE postgres;"
+          sudo gvm-check-setup
+          
+          sudo runuser -u postgres -- psql -d gvmd -c 'CREATE EXTENSION IF NOT EXISTS "uuid-ossp";'
+          sudo runuser -u postgres -- psql -d gvmd -c 'CREATE EXTENSION IF NOT EXISTS pgcrypto;'
+          
+          
+          sudo runuser -u postgres -- psql -c "ALTER DATABASE template1 REFRESH COLLATION VERSION;"
+          sudo runuser -u postgres -- psql -d template1 -c "REINDEX DATABASE template1;"
+          sudo runuser -u postgres -- psql -c "DROP DATABASE IF EXISTS gvmd;"
+          sudo runuser -u postgres -- psql -d gvmd -c "CREATE EXTENSION IF NOT EXISTS uuid-ossp;"
+          sudo runuser -u postgres -- psql -d gvmd -c "CREATE EXTENSION IF NOT EXISTS pgcrypto;"
+          
+          
+          sudo runuser -u postgres -- psql -c "DROP DATABASE IF EXISTS gvmd;"
+          sudo runuser -u postgres -- psql -c "CREATE DATABASE gvmd OWNER _gvm;"
+        </code>
+      </pre>
+
+
 
       <h2>Openvas - Alterar password</h2>
       <pre>
